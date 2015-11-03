@@ -1,6 +1,6 @@
 import * as express from "express";
 import {Routes, Method, RouteDefinition} from "./dependencies";
-import {resolve as urlResolve} from "url";
+import {pathJoin} from "./utils/path-join";
 
 export function initializeRoutes(router: express.Router, routes: any[]) {
     routes.forEach((RouteConstructor) => {
@@ -22,7 +22,7 @@ export function initializeRoutes(router: express.Router, routes: any[]) {
 }
 
 function initializeGet(router: express.Router, instance: Routes, definition: RouteDefinition) {
-    router.get(urlResolve(instance.basePath, definition.name), (req, res, next) => {
+    router.get(pathJoin(instance.basePath, definition.name), (req, res, next) => {
         return definition.func.call(instance, req.params).then((result: any) => {
             res.status(200);
             res.setHeader("Content-Type", "application/json");
@@ -32,7 +32,7 @@ function initializeGet(router: express.Router, instance: Routes, definition: Rou
 }
 
 function initializePost(router: express.Router, instance: Routes, definition: RouteDefinition) {
-    router.post(urlResolve(instance.basePath, definition.name), (req, res, next) => {
+    router.post(pathJoin(instance.basePath, definition.name), (req, res, next) => {
         const sentObject = req.body;
 
         return definition.func.call(instance, sentObject).then((result: any) => {

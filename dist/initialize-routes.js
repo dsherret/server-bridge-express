@@ -1,4 +1,4 @@
-var url_1 = require("url");
+var path_join_1 = require("./utils/path-join");
 function initializeRoutes(router, routes) {
     routes.forEach(function (RouteConstructor) {
         var routes = new RouteConstructor();
@@ -18,7 +18,7 @@ function initializeRoutes(router, routes) {
 }
 exports.initializeRoutes = initializeRoutes;
 function initializeGet(router, instance, definition) {
-    router.get(url_1.resolve(instance.basePath, definition.name), function (req, res, next) {
+    router.get(path_join_1.pathJoin(instance.basePath, definition.name), function (req, res, next) {
         return definition.func.call(instance, req.params).then(function (result) {
             res.status(200);
             res.setHeader("Content-Type", "application/json");
@@ -27,7 +27,7 @@ function initializeGet(router, instance, definition) {
     });
 }
 function initializePost(router, instance, definition) {
-    router.post(url_1.resolve(instance.basePath, definition.name), function (req, res, next) {
+    router.post(path_join_1.pathJoin(instance.basePath, definition.name), function (req, res, next) {
         var sentObject = req.body;
         return definition.func.call(instance, sentObject).then(function (result) {
             res.status(200);

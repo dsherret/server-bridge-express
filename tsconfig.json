@@ -11,6 +11,8 @@
     },
     "files": [
         "src/typings/tsd.d.ts",
+        "src/tests/utils/path-join-tests.ts",
+        "src/utils/path-join.ts",
         "src/dependencies.ts",
         "src/initialize-routes.ts",
         "src/main.ts"
