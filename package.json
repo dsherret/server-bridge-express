@@ -1,0 +1,34 @@
+{
+  "name": "server-bridge-express",
+  "version": "0.1.0",
+  "description": "Route initialization for express with server-bridge.",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "mocha --recursive dist/tests",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsherret/server-bridge-express.git"
+  },
+  "keywords": [
+    "decorators",
+    "typescript",
+    "routes"
+  ],
+  "author": "David Sherret",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dsherret/server-bridge-express/issues"
+  },
+  "homepage": "https://github.com/dsherret/server-bridge-express#readme",
+  "typescript": {
+    "definition": "server-bridge-express.d.ts"
+  },
+  "dependencies": {
+    "express": "~4.13.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
