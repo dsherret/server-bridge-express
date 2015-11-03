@@ -1,7 +1,5 @@
 import * as express from "express";
-import {Routes} from "./routes";
-import {Method} from "./method";
-import {RouteDefinition} from "./route-definition";
+import {Routes, Method, RouteDefinition} from "./dependencies";
 import {resolve as urlResolve} from "url";
 
 export function initializeRoutes(router: express.Router, routes: any[]) {

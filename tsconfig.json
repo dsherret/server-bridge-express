@@ -11,10 +11,8 @@
     },
     "files": [
         "src/typings/tsd.d.ts",
+        "src/dependencies.ts",
         "src/initialize-routes.ts",
-        "src/method.ts",
-        "src/route-definition.ts",
-        "src/routes.ts",
         "src/main.ts"
     ]
 }
