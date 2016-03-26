@@ -1,6 +1,6 @@
 {
   "name": "server-bridge-express",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Route initialization for express with server-bridge.",
   "main": "dist/main.js",
   "scripts": {
@@ -25,8 +25,8 @@
   "typescript": {
     "definition": "server-bridge-express.d.ts"
   },
-  "dependencies": {
-    "express": "~4.13.3"
+  "peerDependencies": {
+    "express": "4.x"
   },
   "devDependencies": {
     "mocha": "^2.3.3"
