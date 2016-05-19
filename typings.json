@@ -1,14 +1,18 @@
 {
   "name": "server-bridge-express",
+  "main": "server-bridge-express.d.ts",
   "version": false,
-  "ambientDependencies": {
+  "resolution": {
+    "main": "src/typings"
+  },
+  "globalDependencies": {
     "es6-promise": "registry:dt/es6-promise#0.0.0+20160317120654",
     "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#0b1df1ca5f554ba826ea6cf1c4bc099a6acc8021",
     "mime": "github:DefinitelyTyped/DefinitelyTyped/mime/mime.d.ts#0b1df1ca5f554ba826ea6cf1c4bc099a6acc8021",
     "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#121837732fcd98bfb3f7bb4c30a490558e0d23ca",
     "serve-static": "github:DefinitelyTyped/DefinitelyTyped/serve-static/serve-static.d.ts#0b1df1ca5f554ba826ea6cf1c4bc099a6acc8021"
   },
-  "ambientDevDependencies": {
+  "globalDevDependencies": {
     "mocha": "github:DefinitelyTyped/DefinitelyTyped/mocha/mocha.d.ts#eb59a40d3c2f3257e34ec2ede181046230814a41"
   }
 }

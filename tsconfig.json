@@ -7,14 +7,10 @@
         "removeComments": true,
         "experimentalDecorators": true,
         "outDir": "dist",
-        "sourceMap": false
+        "sourceMap": false,
+        "rootDir": "src"
     },
-    "files": [
-        "src/typings/main.d.ts",
-        "src/tests/utils/path-join-tests.ts",
-        "src/utils/path-join.ts",
-        "src/dependencies.ts",
-        "src/initialize-routes.ts",
-        "src/main.ts"
+    "exclude": [
+        "server-bridge-express.d.ts"
     ]
 }

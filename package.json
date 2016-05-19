@@ -1,8 +1,9 @@
 {
   "name": "server-bridge-express",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Route initialization for express with server-bridge.",
   "main": "dist/main.js",
+  "typings": "server-bridge-express.d.ts",
   "scripts": {
     "test": "mocha --recursive dist/tests",
     "build": "tsc"
@@ -22,11 +23,9 @@
     "url": "https://github.com/dsherret/server-bridge-express/issues"
   },
   "homepage": "https://github.com/dsherret/server-bridge-express#readme",
-  "typescript": {
-    "definition": "server-bridge-express.d.ts"
-  },
   "peerDependencies": {
-    "express": "4.x"
+    "express": "4.x",
+    "server-bridge": "1.x"
   },
   "devDependencies": {
     "mocha": "^2.3.3"
