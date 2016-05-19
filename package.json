@@ -1,6 +1,6 @@
 {
   "name": "server-bridge-express",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Route initialization for express with server-bridge.",
   "main": "dist/main.js",
   "typings": "server-bridge-express.d.ts",
