@@ -1,5 +1,5 @@
 import * as assert from "assert";
-import {pathJoin} from "./../../utils/path-join";
+import {pathJoin} from "./../../utils/pathJoin";
 
 describe("pathJoin", () => {
     it("should add slashes", () => {

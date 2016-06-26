@@ -1,1 +1,1 @@
-export {initializeRoutes} from "./initialize-routes";
+export {initializeRoutes} from "./initializeRoutes";
