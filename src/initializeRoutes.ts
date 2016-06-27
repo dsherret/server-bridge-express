@@ -23,13 +23,13 @@ export function initializeRoutes(router: express.Router, routes: any[]) {
 
 function initializeGet(router: express.Router, instance: Routes, definition: RouteDefinition) {
     router.get(pathJoin(instance.basePath, definition.name), (req, res, next) => {
-        respond(res, next, definition.func.call(instance, req.params));
+        respond(res, next, definition.func.call(instance, req.query));
     });
 }
 
 function initializePost(router: express.Router, instance: Routes, definition: RouteDefinition) {
     router.post(pathJoin(instance.basePath, definition.name), (req, res, next) => {
-        respond(res, next, definition.func.call(instance, req.body));
+        respond(res, next, definition.func.call(instance, req.body, req.query));
     });
 }
 
